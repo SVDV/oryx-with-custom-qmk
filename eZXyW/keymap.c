@@ -353,6 +353,10 @@ bool get_chordal_hold(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record,
                return true;
            }
            break;
+        case RGUI_T(KC_K):
+          if (other_keycode == KC_SPACE) {
+             return true; 
+          }
         // case RCTL_T(KC_SCLN):
         //    if (other_keycode == KC_N) {
         //        return true;
