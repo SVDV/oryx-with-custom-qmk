@@ -120,42 +120,50 @@ combo_t key_combos[COMBO_COUNT] = {
 };
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
-    return g_tapping_term;
-
-    // switch (keycode) {
-    //     case MT(MOD_LSFT, KC_F):
-    //         return g_tapping_term -20;
-    //     case LT(5,KC_V):
-    //         return g_tapping_term + 35;
-    //     case LT(6,KC_ESCAPE):
-    //         return g_tapping_term -20;
-    //     case MT(MOD_RSFT, KC_J):
-    //         return g_tapping_term -20;
-    //     case LT(8,KC_M):
-    //         return g_tapping_term + 35;
-    //     case MT(MOD_LALT, KC_R):
-    //         return g_tapping_term -10;
-    //     case MT(MOD_LGUI, KC_S):
-    //         return g_tapping_term -10;
-    //     case MT(MOD_LSFT, KC_T):
-    //         return g_tapping_term -10;
-    //     case LT(5,KC_D):
-    //         return g_tapping_term + 60;
-    //     case MT(MOD_RSFT, KC_N):
-    //         return g_tapping_term -10;
-    //     case MT(MOD_RGUI, KC_E):
-    //         return g_tapping_term -10;
-    //     case MT(MOD_RALT, KC_I):
-    //         return g_tapping_term -10;
-    //     case MT(MOD_RCTL, KC_O):
-    //         return g_tapping_term -10;
-    //     case LT(8,KC_H):
-    //         return g_tapping_term + 60;
-    //     case LT(10,KC_ENTER):
-    //         return g_tapping_term -10;
-    //     default:
-    //         return g_tapping_term;
-    // }
+    switch (keycode) {
+        case MT(MOD_LSFT, KC_F):
+            return g_tapping_term -20;
+        case MT(MOD_LGUI, KC_D):
+            return g_tapping_term +20;
+        case MT(MOD_LALT, KC_S):
+            return g_tapping_term +20;
+        case MT(MOD_LCTL, KC_A):
+            return g_tapping_term +20;
+        case LT(5,KC_V):
+            return g_tapping_term + 35;
+        case LT(6,KC_ESCAPE):
+            return g_tapping_term -20;
+        case MT(MOD_RSFT, KC_J):
+            return g_tapping_term -20;
+        case MT(MOD_RGUI, KC_K):
+            return g_tapping_term +20;
+        case MT(MOD_RALT, KC_L):
+            return g_tapping_term +20;
+        case MT(MOD_RCTL, KC_SCLN):
+            return g_tapping_term +20;
+        case LT(8,KC_M):
+            return g_tapping_term + 35;
+        case MT(MOD_LALT, KC_R):
+            return g_tapping_term +20;
+        case MT(MOD_LGUI, KC_S):
+            return g_tapping_term +20;
+        case MT(MOD_LSFT, KC_T):
+            return g_tapping_term -20;
+        case LT(5,KC_D):
+            return g_tapping_term + 35;
+        case MT(MOD_RSFT, KC_N):
+            return g_tapping_term -20;
+        case MT(MOD_RGUI, KC_E):
+            return g_tapping_term +20;
+        case MT(MOD_RALT, KC_I):
+            return g_tapping_term +20;
+        case MT(MOD_RCTL, KC_O):
+            return g_tapping_term +20;
+        case LT(8,KC_H):
+            return g_tapping_term + 35;
+        default:
+            return g_tapping_term;
+    }
 }
 
 extern rgb_config_t rgb_matrix_config;
