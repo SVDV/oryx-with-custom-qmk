@@ -31,7 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_EQUAL,       KC_1,           KC_2,           KC_3,           KC_4,           KC_5,                                           KC_6,           KC_7,           KC_8,           KC_9,           KC_0,           KC_MINUS,       
     CW_TOGG,        KC_Q,           KC_W,           KC_E,           KC_R,           KC_T,                                           KC_Y,           KC_U,           KC_I,           KC_O,           KC_P,           KC_BSLS,        
     ALL_T(KC_TAB),  MT(MOD_LCTL, KC_A),MT(MOD_LALT, KC_S),MT(MOD_LGUI, KC_D),MT(MOD_LSFT, KC_F),KC_G,                                           KC_H,           MT(MOD_RSFT, KC_J),MT(MOD_RGUI, KC_K),MT(MOD_RALT, KC_L),MT(MOD_RCTL, KC_SCLN),ALL_T(KC_QUOTE),
-    KC_UNDS,        KC_Z,           KC_X,           KC_C,           LT(5,KC_V),     KC_B,                                           KC_N,           LT(8,KC_M),     KC_COMMA,       KC_DOT,         KC_SLASH,       KC_MINUS,       
+    KC_UNDS,        KC_Z,           KC_X,           KC_C,           LT(5,KC_V),     KC_B,                                           KC_N,           KC_M,     KC_COMMA,       KC_DOT,         KC_SLASH,       LT(8,KC_MINUS),       
                                                     LT(7,KC_ENTER), LT(6,KC_ESCAPE),                                LT(3,KC_BSPC),  LT(4,KC_SPACE)
   ),
   [1] = LAYOUT_voyager(
@@ -124,11 +124,11 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MT(MOD_LSFT, KC_F):
             return g_tapping_term -20;
         case MT(MOD_LGUI, KC_D):
-            return g_tapping_term +20;
+            return g_tapping_term +30;
         case MT(MOD_LALT, KC_S):
-            return g_tapping_term +20;
+            return g_tapping_term +30;
         case MT(MOD_LCTL, KC_A):
-            return g_tapping_term +20;
+            return g_tapping_term +30;
         case LT(5,KC_V):
             return g_tapping_term + 35;
         case LT(6,KC_ESCAPE):
@@ -136,12 +136,12 @@ uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
         case MT(MOD_RSFT, KC_J):
             return g_tapping_term -20;
         case MT(MOD_RGUI, KC_K):
-            return g_tapping_term +20;
+            return g_tapping_term +30;
         case MT(MOD_RALT, KC_L):
-            return g_tapping_term +20;
+            return g_tapping_term +30;
         case MT(MOD_RCTL, KC_SCLN):
-            return g_tapping_term +20;
-        case LT(8,KC_M):
+            return g_tapping_term +30;
+        case LT(8,KC_MINUS):
             return g_tapping_term + 35;
         case MT(MOD_LALT, KC_R):
             return g_tapping_term +20;
